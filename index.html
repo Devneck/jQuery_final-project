@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Name:       Sean Glover
+        Class:      CIS 114 - JavaScript/jQuery
+        Assignment: Lesson 08: jquery Tabbed website
+        Due:        6/11/13
+    -->
+
+    <title>Tabbed website</title>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+
+    <link rel="stylesheet" href="css/jquery-ui-1.10.3.custom.min.css">
+    <link rel="stylesheet" href="css/slimbox2.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.1.0.min.js"></script>
+    <!--<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>-->
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/cloud-carousel.1.0.5.js"></script>
+    <script src="js/slimbox2.js"></script>
+    <script src="js/jquery.sizes.js"></script>
+    <script src="js/jlayout.grid.js"></script>
+    <script src="js/jquery.jlayout.js"></script>
+    <script src="js/index.js"></script>
+
+</head>
+
+<body>
+
+<div id="tabs">
+    <ul id="tabList">
+        <li>
+            <a href="#tab1" title="Home"><span>Home</span></a>
+        </li>
+        <li>
+            <a href="#tab2" title="Carousel and Lightbox Images"><span>Gallery</span></a>
+        </li>
+        <li>
+            <a href="#tab3" title="Additional Info Accordion"><span>More Info</span></a>
+        </li>
+        <li>
+            <a href="#tab4" title="Date Pickers"><span>Travel Dates</span></a>
+        </li>
+        <li>
+            <a href="#tab5" title="Tooltips and Dialog"><span>Tooltips</span></a>
+        </li>
+        <li>
+            <a href="#tab6" title="2 Column Layout"><span>Columns</span></a>
+        </li>
+    </ul>
+    <div id="tab1" class="tabBody">
+        <p class="comments">
+            This is the Final Project for the JavaScript/jQuery class. This tab is the home and was used as the
+            starting point for the Tabs you will see above. The tab widget is pretty neat and fairly simple to use. I
+            think I actually spent more time playing with the different themes and trying to figure out what I wanted
+            this page to look like than actually setting up the tabs. In the end, I ended up selecting one of the
+            provided themes that I liked best.
+        </p>
+    </div>
+    <div id="tab2" class="tabBody">
+        <div id="carousel">
+            <a href="css/images/puppyhiding.jpg" rel="lightbox-set" title="Cute puppy hiding">
+                <img class="cloudcarousel" src="css/images/puppyhiding-thumb.jpg" alt="Puppy Hiding" title="Cute puppy hiding" />
+            </a>
+            <a href="css/images/girl.jpg" rel="lightbox-set" title="Girl showing excitement">
+                <img class="cloudcarousel" src="css/images/girl-thumb.jpg" alt="Happy Girl" title="Girl showing excitement" />
+            </a>
+            <a href="css/images/rainbow.jpg" rel="lightbox-set" title="A rainbow in the sky">
+                <img class="cloudcarousel" src="css/images/rainbow-thumb.jpg" alt="Rainbow Skyline" title="A rainbow in the sky" />
+            </a>
+            <a href="css/images/skatingdog.jpg" rel="lightbox-set" title="Riding the skateboard">
+                <img class="cloudcarousel" src="css/images/skatingdog-thumb.jpg" alt="Skateboard Dog" title="Riding the skateboard" />
+            </a>
+            <a href="css/images/tech.jpg" rel="lightbox-set" title="Advanced Technology">
+                <img class="cloudcarousel" src="css/images/tech-thumb.jpg" alt="Technology" title="Advanced Technology" />
+            </a>
+            <a href="css/images/girl2.jpg" rel="lightbox-set" title="Girl looking at phone">
+                <img class="cloudcarousel" src="css/images/girl2-thumb.jpg" alt="Phone Call" title="Girl looking at phone" />
+            </a>
+            <a href="css/images/tree.jpg" rel="lightbox-set" title="Moss covered tree">
+                <img class="cloudcarousel" src="css/images/tree-thumb.jpg" alt="Forest Tree" title="Moss covered tree" />
+            </a>
+            <a href="css/images/golf.jpg" rel="lightbox-set" title="Putting for par">
+                <img class="cloudcarousel" src="css/images/golf-thumb.jpg" alt="Golf Putt" title="Putting for par" />
+            </a>
+            <a href="css/images/skyline.jpg" rel="lightbox-set" title="City skyline">
+                <img class="cloudcarousel" src="css/images/skyline-thumb.jpg" alt="Skyline" title="City skyline" />
+            </a>
+            <a href="css/images/rockclimbing.jpg" rel="lightbox-set" title="You can do it">
+                <img class="cloudcarousel" src="css/images/rockclimbing-thumb.jpg" alt="Rockclimbing" title="You can do it" />
+            </a>
+
+            <button id="left-but" class="ui-state-default ui-corner-all" style="height: 30px; width: 30px;"><span class="ui-icon ui-icon-circle-triangle-w"></span></button>
+            <button id="right-but" class="ui-state-default ui-corner-all" style="height: 30px; width: 30px;"><span class="ui-icon ui-icon-circle-triangle-e"></span></button>
+
+            <p id="title-text"></p>
+            <p id="alt-text"></p>
+
+        </div>
+
+        <p class="comments">
+            This tab is used for the Carousel and Lightbox plug-ins. I had a lot of fun with these 2 plug-ins and can
+            definitely see me looking for a reason to use each of these. A couple things I did notice about these 2
+            plug-ins though. On the Carousel, there is a defect with how the arrows progress when navigating to the
+            right which will not jump from the first image to the last image for displaying the title and alt text. No
+            worries though, as someone had provided the code on how to correct the issue in the comments section. With
+            the Slimbox2 plug-in (used as the Lightbox), the html code required to make it work does not validate. This
+            isn't much of an issue since it works nonetheless, but I would be curious if the author is exploring other
+            options that would allow the page to validate.
+        </p>
+
+    </div>
+    <div id="tab3" class="tabBody">
+        <div id="accordion">
+            <h3>First Accordion Header</h3>
+            <div>
+                <p class="comments">
+                    This particular tab is used for the Accordion widget. This widget I have a little experience with
+                    so it was very simple. I like the way this widget works and how easy it is to implement in the
+                    code. I can see myself looking for reasons to use this in the future.
+                </p>
+                <p>
+                    Nulla ultricies scelerisque sapien quis consequat. Nullam eleifend diam ac mi mollis, sit amet
+                    mollis nisi rutrum. Quisque tristique, sapien nec adipiscing feugiat, mi dolor eleifend nisi, vel
+                    pharetra leo ante eu lorem. Donec augue massa, luctus eu iaculis quis, dictum ullamcorper nunc. Ut
+                    a dolor posuere, pretium neque sed, luctus tellus. Vivamus augue dui, ultrices eu pharetra non,
+                    sagittis et erat. Curabitur eget bibendum sem. Proin mollis venenatis risus, in iaculis lacus.
+                    Aliquam egestas tempor venenatis. Maecenas at risus urna. Aliquam ultrices consectetur gravida.
+                    Ut viverra sem eget quam hendrerit fringilla. Etiam iaculis tincidunt enim nec bibendum. Praesent
+                    interdum volutpat vulputate.
+                </p>
+            </div>
+            <h3>Second Accordion Header</h3>
+            <div>
+                <p>
+                    Mauris malesuada interdum lacus commodo tincidunt. In bibendum metus turpis, ut vehicula nisi
+                    iaculis id. Sed sit amet urna sed ligula elementum mattis sed vitae mauris. Aliquam erat volutpat.
+                    Fusce semper lacinia suscipit. Nulla id leo non libero hendrerit convallis. Nunc fermentum gravida
+                    turpis quis iaculis. Praesent fermentum, est sit amet rutrum condimentum, dui felis viverra dolor,
+                    ac hendrerit odio orci vitae dolor. Etiam nisl diam, pretium bibendum magna et, pretium ultricies
+                    quam. Praesent viverra, arcu vitae accumsan blandit, risus ante commodo elit, id aliquet magna est
+                    ut massa. Integer rutrum dapibus nisl.
+                </p>
+            </div>
+            <h3>Third Accordion Header</h3>
+            <div>
+                <p>
+                    Sed feugiat quam at aliquet ultricies. Nunc tempor nibh ipsum, commodo hendrerit justo tristique
+                    eu. Phasellus euismod nibh at est auctor, ut blandit est elementum. Morbi quis sapien nec metus
+                    tincidunt rutrum. Proin convallis consequat luctus. Nullam consequat lacus eu sapien tempus
+                    elementum. Aliquam ultricies lectus a iaculis volutpat.
+                </p>
+                <p>
+                    Nunc ac gravida magna. Cras iaculis aliquet est eget semper. Nunc massa dui, facilisis at euismod
+                    ut, pulvinar vel metus. Mauris congue laoreet justo, non convallis risus faucibus quis. Aenean
+                    pellentesque aliquet enim ac cursus. Pellentesque habitant morbi tristique senectus et netus et
+                    malesuada fames ac turpis egestas. Praesent bibendum, felis et convallis adipiscing, nunc lectus
+                    pulvinar orci, eget porta nibh nisl id magna
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="tab4" class="tabBody">
+        <p class="comments">
+            The Date Picker widget ... this particular piece of the assignment was the bane of my existence. I had
+            a very tough time getting this to work the way the requirements called for it. Particularly,
+            manipulating the start and end dates on the return date based on the selection in the departure date. I
+            will need to spend quite a bit more time working with this widget in the future before trying to deploy
+            it in a professional environment.
+        </p>
+        <div id="travel">
+
+            <label for="departDate">Departure Date:</label>
+            <input type="text" id="departDate"/><br/>
+            <label for="returnDate">Return Date:</label>
+            <input type="text" id="returnDate">
+        </div>
+
+        <div id="datepicker_start"></div>
+        <div id="datepicker_end"></div>
+
+    </div>
+    <div id="tab5" class="tabBody">
+        <p class="comments">
+            This tab focuses on Tooltips and Tabs, or more specifically adding Tabs. The tooltips were very easy to
+            implement, basically just turn them on (initialize). Then it was simply a matter of styling to look nice. I
+            feel like I struggle with the "look" part of a website because I am not really a graphic person but I
+            generally feel pretty good about the code which has nothing to do with graphics. I don't know if this is
+            what was expected in terms of styling the tooltips, I just changed a few things so that I could show that I
+            understood how to do that. The adding of a new tab was fun for me. It wasn't until I finished hand coding
+            the entire add process flow when I realized the requirements reference a code example we could use and
+            modify. I think it was better for me to actually do it myself rather than change someone else's code. After
+            looking at the example, I actually like my way better because I perform client side validation on the fields
+            prior to adding the tab where the example would add the tab even when the fields are left blank. My method
+            seems more realistic to me as far as end result. By the way, feel free to add a tab now with the button
+            below.
+        </p>
+        <h3>Add New Tabs</h3>
+
+        <button id="addTab">Add Tab</button>
+        <!--<button id="addTab" class="ui-state-default ui-corner-all"><span>Add Tab</span></button>-->
+        <div id="addTabDialog" title="Add New Tab">
+            <div id="errorMsg" class="ui-state-default ui-state-error ui-corner-all">
+                <span id="alertIcon" class="ui-icon ui-icon-alert"></span><span class="ui-state-error-text">Title and Content are required to add a new Tab.<br/></span>
+            </div>
+
+
+            <label for="tabTitle">Title</label>
+            <br/>
+            <input type="text" id="tabTitle"/>
+            <br/>
+            <label for="tabContent">Content</label>
+            <br/>
+            <textarea rows="4" cols="30" id="tabContent"></textarea>
+            <hr/>
+
+        </div>
+
+
+    </div>
+    <div id="tab6" class="tabBody">
+        <div id="layoutContainer" data-layout='{type: "grid", columns: 2, rows: 1}'>
+            <div>
+                <h3>Column 1</h3>
+                <p class="comments">
+                    This final tab (although there is probably another now that you added one from the previous tab)
+                    is using the jLayout plug-in. I wasn't really too impressed with this plug-in, I guess the various
+                    layouts I did not select might have made it more entertaining but it really just seems to me this
+                    could be handled quite easily with styles or replicated without the plug-in quite simply. Of course,
+                    the plug-in did make it quicker, but it does not seem like something that saves you hours upon
+                    hours. I did have to add a height and the overflow to the entire page specifically for this tab.
+                    Without it, then the entire containing div shifted as a result of the scrollbar on the right. I'm
+                    not really fond of it being there and would probably explore different options if I had more time
+                    to work on this. The method I used just reminds me of frames a little too much...
+                </p>
+
+                <p>
+                    Vestibulum volutpat convallis dictum. Ut vitae neque ut nulla accumsan molestie. Morbi rutrum magna
+                    turpis, ac convallis nisl volutpat vel. Suspendisse pharetra lorem non sapien vestibulum malesuada.
+                    Fusce non felis et tortor varius pharetra quis lobortis lectus. Donec vehicula sollicitudin nisi,
+                    et interdum mauris tincidunt at. Sed ut risus eros. Suspendisse luctus a dui at commodo. Proin
+                    pharetra orci metus, eu ultrices arcu dapibus at. Donec sed urna eu metus ullamcorper ultrices.
+                    Morbi fermentum enim sem, in commodo nisl sodales non. Mauris id elit id diam eleifend volutpat.
+                    Vivamus hendrerit dictum quam quis congue. Pellentesque velit justo, consectetur ac nibh eu,
+                    feugiat eleifend urna. Phasellus id tellus sit amet ipsum euismod egestas eget mollis lacus.
+                </p>
+            </div>
+            <div>
+                <h3>Column 2</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec ligula nec sapien semper gravida
+                    vel tincidunt metus. Cras non faucibus lorem. Etiam sagittis hendrerit consequat. Praesent at
+                    rutrum neque. Cras ultricies diam at suscipit egestas. Ut mollis et lacus at fermentum. Morbi
+                    molestie risus quis erat tristique porta. Quisque in lacus nec odio euismod accumsan nec vel velit.
+                    Duis condimentum arcu ac sagittis rutrum. Praesent vitae sem orci. Morbi pellentesque a orci at
+                    porttitor. Vestibulum in mollis ligula. Duis et ornare nisi. Phasellus molestie scelerisque mauris
+                    at vehicula.
+                </p>
+
+                <p>
+                    Nulla facilisi. Nulla facilisi. In ultricies massa elit. Cras tristique orci neque, ac adipiscing
+                    massa vestibulum eget. Vestibulum rhoncus libero sed ornare pharetra. Vivamus adipiscing augue sed
+                    ligula faucibus, ut mollis erat imperdiet. Cum sociis natoque penatibus et magnis dis parturient
+                    montes, nascetur ridiculus mus. Maecenas euismod vehicula pretium. Etiam egestas libero est, at
+                    mollis dui elementum non. Nunc interdum pellentesque rhoncus. Donec sed sem ac tellus semper
+                    pulvinar. Aliquam sodales libero quis lorem laoreet consequat eu et felis. Nulla aliquet fermentum
+                    arcu, ut semper turpis pharetra a. Nunc justo risus, condimentum ac risus et, adipiscing interdum
+                    enim.
+                </p>
+
+                <p>
+                    Phasellus ac odio orci. Duis convallis, nunc quis consequat convallis, tellus nibh viverra justo,
+                    sed ullamcorper elit felis et metus. In laoreet felis in gravida iaculis. Nulla quis pharetra orci.
+                    Nullam in sem sed nisi suscipit facilisis. Curabitur in nisl ut eros pretium tincidunt quis sit
+                    amet nibh. Pellentesque molestie massa tortor, at accumsan mi dictum id. Integer eget urna a lacus
+                    placerat adipiscing. Morbi vehicula a lectus quis gravida. Nulla vehicula, erat sit amet adipiscing
+                    aliquam, nisi metus aliquet enim, a vulputate ipsum ligula a ante. Cum sociis natoque penatibus et
+                    magnis dis parturient montes, nascetur ridiculus mus. Sed congue felis nec augue porttitor, a
+                    posuere tortor rutrum. Aenean in placerat leo. Nulla semper quam eu volutpat euismod.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
